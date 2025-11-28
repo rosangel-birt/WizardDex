@@ -16,14 +16,29 @@
         <main>
             <aside id="filtros">
                 <h1>Filtros</h1>
-                <input class="entradaFiltro" type="text" id="filtroNombre" name="nombre" placeholder="Nombre del personaje" />
-                <select id="filtroCasa" name="casa" class="entradaFiltro">
-                    <option selected value="">Escoge una casa</option>
-                    <option value="Gryffindor">Gryffindor</option>
-                    <option value="Hufflepuff">Hufflepuff</option>
-                    <option value="Ravenclaw">Ravenclaw</option>
-                    <option value="Slytherin">Slytherin</option>
-                </select>
+                <div class="entradaFiltro">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="filtroNombre" name="nombre" placeholder="Nombre del personaje" />
+                </div>
+                <div class="filtroSelect">
+                    <label for="filtroCasa">Casa:</label>
+                    <select id="filtroCasa" name="casa">
+                        <option selected value=""></option>
+                        <option value="Gryffindor">Gryffindor</option>
+                        <option value="Hufflepuff">Hufflepuff</option>
+                        <option value="Ravenclaw">Ravenclaw</option>
+                        <option value="Slytherin">Slytherin</option>
+                    </select>
+                </div>
+
+                <div class="filtroSelect">
+                    <label for="filtroVivoOMuerto">Estado:</label>
+                    <select id="filtroVivoOMuerto" name="casa">
+                        <option selected value="">Todos</option>
+                        <option value="vivo">Vivo</option>
+                        <option value="muerto">Muerto</option>
+                    </select>
+                </div>
 
                 <button id="botonFiltros" type="button">Aplicar Filtros</button>
             </aside>

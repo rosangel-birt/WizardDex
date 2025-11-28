@@ -135,11 +135,21 @@ main {
     overflow-y: auto;
 }
 
-.entradaFiltro {
-    width: 100%;
+.filtroSelect, .entradaFiltro {
     margin-top: 1rem;
-    height: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.filtroSelect label,
+.entradaFiltro label {
     font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.entradaFiltro {
+    height: 1.5rem;
 }
 
 #botonFiltros {
