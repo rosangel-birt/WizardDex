@@ -21,7 +21,7 @@ export function actualizarDistribucion(personajesPorCasa) {
     });
 }
 
-export function agregarPersonajeALaLista(personaje) {
+export function actualizarPersonajes(personaje) {
     const urlImagenGenerica = "https://potterdb.com/images/missing_character.svg";
     const nombre = personaje.name;
     const casa = personaje.house;
