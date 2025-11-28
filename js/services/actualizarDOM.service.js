@@ -35,7 +35,7 @@ export function actualizarDistribucion(personajesPorCasa) {
 }
 
 function onClickPersonaje(idPersonaje) {
-    window.location.href = "/personaje.html?personaje=" + idPersonaje;
+    window.location.href = "./personaje.html?personaje=" + idPersonaje;
 }
 
 /**
