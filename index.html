@@ -14,7 +14,19 @@
         </header>
 
         <main>
-            <aside id="filtros">filtradito</aside>
+            <aside id="filtros">
+                <h1>Filtros</h1>
+                <input class="entradaFiltro" type="text" id="filtroNombre" name="nombre" placeholder="Nombre del personaje" />
+                <select id="filtroCasa" name="casa" class="entradaFiltro">
+                    <option selected value="">Escoge una casa</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                    <option value="Slytherin">Slytherin</option>
+                </select>
+
+                <button id="botonFiltros" type="button">Aplicar Filtros</button>
+            </aside>
 
             <section id="contenedorPrincipal">
                 <section id="kpi">

@@ -16,7 +16,7 @@ export function actualizarVivos(personajesVivos, totalDePersonajes) {
 
 export function actualizarDistribucion(personajesPorCasa) {
     const elementoHtml = document.getElementById("proporcionPorEscuela");
-    let textoAMostrar = "";
+    elementoHtml.innerHTML = "";
     Object.entries(personajesPorCasa).forEach(([casa, personajes]) => {
         const elementoCasa = document.createElement("span");
         elementoCasa.innerText = casa + ": " + personajes;
@@ -24,7 +24,7 @@ export function actualizarDistribucion(personajesPorCasa) {
     });
 }
 
-export function actualizarPersonajes(personaje) {
+function actualizarPersonaje(personaje) {
     const urlImagenGenerica =
         "https://potterdb.com/images/missing_character.svg";
     const nombre = personaje.name;
@@ -48,4 +48,14 @@ export function actualizarPersonajes(personaje) {
 
     const elementoContenedor = document.getElementById("listaPersonajes");
     elementoContenedor.appendChild(elementoPersonaje);
+}
+
+export function actualizarPersonajes(personajes) {
+    console.log(personajes);
+    const elementoContenedor = document.getElementById("listaPersonajes");
+    elementoContenedor.innerHTML = "";
+
+    personajes.forEach((personaje) => {
+        actualizarPersonaje(personaje);
+    });
 }
