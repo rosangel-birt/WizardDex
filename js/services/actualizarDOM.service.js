@@ -26,6 +26,10 @@ export function actualizarDistribucion(personajesPorCasa) {
     });
 }
 
+function onClickPersonaje(idPersonaje) {
+    window.location.href = "/personaje.html?personaje=" + idPersonaje;
+}
+
 function actualizarPersonaje(personaje) {
     const urlImagenGenerica =
         "https://potterdb.com/images/missing_character.svg";
@@ -48,6 +52,8 @@ function actualizarPersonaje(personaje) {
     elementoPersonaje.appendChild(elementoImagen);
     elementoPersonaje.appendChild(elementoNombre);
     elementoPersonaje.appendChild(elementoCasa);
+
+    elementoPersonaje.addEventListener("click", () => { onClickPersonaje(personaje.slug) });
 
     const elementoContenedor = document.getElementById("listaPersonajes");
     elementoContenedor.appendChild(elementoPersonaje);
