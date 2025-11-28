@@ -69,6 +69,6 @@ if (!window.location.pathname.includes("personaje")) {
     const botonVolver = document.getElementById("botonVolver");
     botonVolver.addEventListener("click", () => {
         // Vuelve a la página principal
-        window.location.href = "/";
+        window.location.href = "./";
     });
 }
