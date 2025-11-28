@@ -1,3 +1,9 @@
+/**
+ * Calcula el porcentaje de personajes vivos, el total de personajes de
+ * Hogwarts y la cantidad de personajes que hay por casa
+ * @param respuesta - contiene los datos de la API
+ */
+
 export function procesarPersonajes(respuesta) {
     const total = respuesta.meta.pagination.records;
     let personajesVivos = 0;

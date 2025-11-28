@@ -7,7 +7,11 @@ export function actualizarNPersonajes(personajesDisponibles) {
     const elementoHtml = document.getElementById("nPersonajes");
     elementoHtml.innerText = personajesDisponibles;
 }
-
+/**
+ * 
+ *  Actualiza el elemento porcentajeVivos para obtener el porcentaje de los
+ *  los personajes vivos mostrados en la pantalla
+ */
 export function actualizarVivos(personajesVivos, totalDePersonajes) {
     const elementoHtml = document.getElementById("porcentajeVivos");
     elementoHtml.innerText = (
@@ -16,6 +20,10 @@ export function actualizarVivos(personajesVivos, totalDePersonajes) {
     ).toFixed(2);
 }
 
+/**
+ * 
+ * Actualiza la cantidad de personajes que hay por cada casa de Hogwarts
+ */
 export function actualizarDistribucion(personajesPorCasa) {
     const elementoHtml = document.getElementById("proporcionPorEscuela");
     elementoHtml.innerHTML = "";
@@ -30,6 +38,11 @@ function onClickPersonaje(idPersonaje) {
     window.location.href = "/personaje.html?personaje=" + idPersonaje;
 }
 
+/**
+ * 
+ * Recibe un personaje y crea su ficha de con su nombre, casa e imagen
+ * Agrega un click que redirige a la página con los detalles del personaje
+ */
 function actualizarPersonaje(personaje) {
     const urlImagenGenerica =
         "https://potterdb.com/images/missing_character.svg";
@@ -68,6 +81,12 @@ export function actualizarPersonajes(personajes) {
     });
 }
 
+/**
+ * 
+ * Genera y actualiza los botones para el cambio de pantalla.
+ * Teniendo un boton para ir a la página anterior y a la siguiente
+ * Crea eventos para permitir el cambio de páginas
+ */
 export function actualizarPaginacion(onClickAnterior, onClickSiguiente, actual) {
     const elementoActual = document.createElement("span");
     elementoActual.id = "paginaActual";

@@ -12,6 +12,12 @@ import {
 import { actualizarPersonaje } from "./services/fichaPersonaje.service.js";
 import { extraerFiltros } from "./services/obtenerFiltros.service.js";
 
+
+/**
+ * 
+ * Contiene la lógica principal del proyecto. Carga los personajes, actualiza 
+ * la información mostrada por pantalla y gestiona la paginación
+ */
 function actualizar(pagina = 1) {
     const filtros = extraerFiltros();
     const respuesta = fetchConFiltrosDePersonajes(filtros, pagina);

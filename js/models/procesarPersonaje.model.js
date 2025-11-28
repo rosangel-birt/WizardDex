@@ -1,3 +1,9 @@
+/**
+ * 
+ * Fichero que procesa los datos de un personaje e incluye valores por defectos 
+ * para atributos que puedan venir sin información
+ */
+
 export function procesarPersonaje(respuesta) {
     const atributos = respuesta.data.attributes;
     const nombre = atributos.name;

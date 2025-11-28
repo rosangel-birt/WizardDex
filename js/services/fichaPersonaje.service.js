@@ -1,3 +1,9 @@
+/**
+ * Muestra en pantalla toda la información de un personaje: su foto, nombre
+ * y una lista con sus datos más importantes. Si tiene alias o un enlace a su
+ * wiki, también los agrega.
+ */
+
 export function actualizarPersonaje(personaje) {
     const urlImagenGenerica =
         "https://potterdb.com/images/missing_character.svg";
