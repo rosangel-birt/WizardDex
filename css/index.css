@@ -106,7 +106,7 @@ main {
 
 .personaje {
     width: 15rem;
-    height: auto;
+    height: 15rem;
     text-align: center;
     background-color: var(--color-fondo);
     border-radius: 0.5rem;
@@ -125,16 +125,17 @@ main {
 }
 
 .personaje img {
-    width: 10rem;
+    max-height: 12rem;
+    margin-bottom: auto;
     border-radius: 0.5rem;
 }
 
 .personaje.destacado {
-    width: 18rem;
     border-color: #1d476f;
     opacity: 0.9;
-    transition: 1s;
+    transition: 0.5s;
     cursor: pointer;
+    box-shadow: 0.5rem 0.5rem white;
 }
 
 #proporcionPorEscuela {
