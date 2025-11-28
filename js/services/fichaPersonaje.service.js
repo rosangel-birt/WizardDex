@@ -40,5 +40,23 @@ export function actualizarPersonaje(personaje) {
     agregarDato("Nacimiento", personaje.nacimiento);
     agregarDato("Muerte", personaje.muerte);
 
+    if (personaje.aliases && personaje.aliases.length > 0) {
+        // El personaje tiene aliases, los concatenamos para mostrarlos
+        agregarDato("Alias", personaje.aliases.join(", ")); // La función join los junta con una coma
+    }
+
+    // Agregar el link para ir a la wiki
+    if (personaje.link) {
+        const elementoLink = document.createElement("li");
+        const link = document.createElement("a");
+        link.classList.add("link");
+        link.href = personaje.link;
+        link.innerText = "Ver más info en la wiki ->";
+        link.target = "_blank";
+
+        elementoLink.appendChild(link);
+        listaDatos.appendChild(elementoLink);
+    }
+
     contenedorFicha.appendChild(listaDatos);
 }

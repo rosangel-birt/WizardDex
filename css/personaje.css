@@ -28,7 +28,8 @@
 }
 
 #fichaPersonaje .personaje h2 {
-    margin-bottom: auto;
+    margin-bottom: 1rem;
+    font-size: 3rem;
 }
 
 #fichaPersonaje .personaje img {
@@ -78,4 +79,13 @@ footer button {
 footer button:hover {
     background-color: #004060;
     cursor: pointer;
+}
+
+.link {
+    color: white;
+    font-size: 3rem;
+}
+
+.link:hover {
+    color: #a0a0a0;
 }
