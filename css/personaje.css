@@ -59,3 +59,23 @@
 .fichaDatos li {
     border-bottom: 1px solid white;
 }
+
+footer {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer button {
+    width: 20rem;
+    height: 3rem;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+}
+
+footer button:hover {
+    background-color: #004060;
+    cursor: pointer;
+}

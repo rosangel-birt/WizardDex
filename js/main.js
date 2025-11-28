@@ -43,4 +43,9 @@ if (!window.location.pathname.includes("personaje")){
     // Página del personaje en concreto, debería mostrar solo la información relevante
     // haciendo la consulta correspondiente para recibir esos datos
     iniciarPersonaje();
+    const botonVolver = document.getElementById("botonVolver");
+    botonVolver.addEventListener("click", () => {
+        // Vuelve a la página principal
+        window.location.href = "/";
+    });
 }
