@@ -51,7 +51,6 @@ function actualizarPersonaje(personaje) {
 }
 
 export function actualizarPersonajes(personajes) {
-    console.log(personajes);
     const elementoContenedor = document.getElementById("listaPersonajes");
     elementoContenedor.innerHTML = "";
 

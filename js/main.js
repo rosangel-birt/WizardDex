@@ -19,7 +19,6 @@ function actualizar() {
         actualizarVivos(estado.personajesVivos, estado.listaPersonajes.length);
         actualizarDistribucion(estado.personajesPorCasa);
         actualizarPersonajes(estado.listaPersonajes);
-        console.log(estado);
     });
 }
 
