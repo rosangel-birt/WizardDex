@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WizardDex</title>
         <link href="css/index.css" rel="stylesheet" />
-        <script src="js/main.js"></script>
+        <script src="js/main.js" type="module"></script>
     </head>
 
     <body>
@@ -14,19 +14,25 @@
         </header>
 
         <main>
-            <aside id="filtros">
-                filtradito
-            </aside>
+            <aside id="filtros">filtradito</aside>
 
             <section id="contenedorPrincipal">
                 <section id="kpi">
-                    <div id="#nPersonajes" class="estadistica">Numero de personajes</div>
-                    <div id="#porcentajeVivos" class="estadistica">% Vivos</div>
-                    <div id="#proporcionPorEscuela" class="estadistica">GRAFICO</div>
+                    <div class="estadistica">
+                        <span class="etiqueta">Numero de personajes:</span>
+                        <span id="nPersonajes" class="valor"></span>
+                    </div>
+                    <div class="estadistica">
+                        <span class="etiqueta">% Vivos mostrados</span>
+                        <span id="porcentajeVivos" class="valor"></span>
+                    </div>
+                    <div class="estadistica">
+                        <span class="etiqueta">Distribución casas visibles</span>
+                        <span id="proporcionPorEscuela" class="valor"></span>
+                    </div>
                 </section>
 
                 <section id="listaPersonajes">
-                    esto será una lista de personajes
                 </section>
             </section>
         </main>
