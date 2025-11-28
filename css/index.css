@@ -36,7 +36,7 @@ header {
 
 #contenedorPrincipal {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 9fr 1fr;
     height: 100%;
     min-height: 0;
 }
@@ -176,8 +176,40 @@ main {
     display: block;
 }
 
-#botonFiltros:hover {
+#botonFiltros:hover,
+#paginacion button:hover {
     background-color: #004060;
     cursor: pointer;
     font-size: 1.25rem;
+}
+
+#paginacion {
+    width: auto;
+    background-color: var(--color-secundario);
+    min-height: 0;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#paginacion button {
+    color: white;
+    border: none;
+    display: block;
+    background-color: var(--color-fondo);
+    width: 10rem;
+    height: 70%;
+    align-self: center;
+}
+
+#paginaActual {
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+button:disabled {
+    opacity: 0.5;
 }

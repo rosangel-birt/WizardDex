@@ -67,3 +67,36 @@ export function actualizarPersonajes(personajes) {
         actualizarPersonaje(personaje);
     });
 }
+
+export function actualizarPaginacion(onClickAnterior, onClickSiguiente, actual) {
+    const elementoActual = document.createElement("span");
+    elementoActual.id = "paginaActual";
+    elementoActual.innerText = actual;
+    const elementoAnterior = document.createElement("button");
+    elementoAnterior.id = "paginaAnterior";
+    elementoAnterior.innerText = "Página anterior";
+
+    const elementoSiguiente = document.createElement("button");
+    elementoSiguiente.id = "paginaSiguiente";
+    elementoSiguiente.innerText = "Página siguiente"
+    if (onClickAnterior) {
+        elementoAnterior.disabled = false;
+        elementoAnterior.addEventListener("click", onClickAnterior);
+    } else {
+        elementoAnterior.disabled = true;
+    }
+
+    if (onClickSiguiente) {
+        elementoSiguiente.disabled = false;
+        elementoSiguiente.addEventListener("click", onClickSiguiente);
+    } else {
+        elementoSiguiente.disabled = true;
+    }
+
+    const contenedorPaginacion = document.getElementById("paginacion");
+    contenedorPaginacion.innerHTML = "";
+
+    contenedorPaginacion.appendChild(elementoAnterior);
+    contenedorPaginacion.appendChild(elementoActual);
+    contenedorPaginacion.appendChild(elementoSiguiente);
+}
