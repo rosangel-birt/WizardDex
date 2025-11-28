@@ -8,7 +8,10 @@ export function actualizarNPersonajes(personajesDisponibles) {
 
 export function actualizarVivos(personajesVivos, totalDePersonajes) {
     const elementoHtml = document.getElementById("porcentajeVivos");
-    elementoHtml.innerText = (personajesVivos / totalDePersonajes * 100).toFixed(2);
+    elementoHtml.innerText = (
+        (personajesVivos / totalDePersonajes) *
+        100
+    ).toFixed(2);
 }
 
 export function actualizarDistribucion(personajesPorCasa) {
@@ -22,14 +25,15 @@ export function actualizarDistribucion(personajesPorCasa) {
 }
 
 export function actualizarPersonajes(personaje) {
-    const urlImagenGenerica = "https://potterdb.com/images/missing_character.svg";
+    const urlImagenGenerica =
+        "https://potterdb.com/images/missing_character.svg";
     const nombre = personaje.name;
     const casa = personaje.house;
     const imagen = personaje.image ? personaje.image : urlImagenGenerica;
 
     const elementoNombre = document.createElement("h2");
     elementoNombre.innerText = nombre;
-    
+
     const elementoCasa = document.createElement("h2");
     elementoCasa.innerText = casa;
 

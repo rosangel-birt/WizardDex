@@ -1,4 +1,4 @@
-export function procesarPersonajes(respuesta) { 
+export function procesarPersonajes(respuesta) {
     const total = respuesta.meta.pagination.records;
     let personajesVivos = 0;
     const personajesPorCasa = {};
@@ -9,7 +9,7 @@ export function procesarPersonajes(respuesta) {
         if (estaVivo) {
             personajesVivos += 1;
         }
-        
+
         const casa = personaje.attributes.house;
         if (casa != null) {
             if (!personajesPorCasa[casa]) {
@@ -25,11 +25,11 @@ export function procesarPersonajes(respuesta) {
 
         listaPersonajes.push(personaje.attributes);
     });
-    
+
     return {
         total,
         personajesVivos,
         personajesPorCasa,
-        listaPersonajes
-    }
+        listaPersonajes,
+    };
 }
