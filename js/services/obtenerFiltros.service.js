@@ -1,3 +1,8 @@
+/**
+ * Extrae los filtros de los elementos html y devuelve un array que contiene todos
+ * estos, de manera que puedan ser utilizados por la capa de data para hacer el filtrado
+ * @returns Array con filtros, de esta forma: {tipo: tipo de filtro, valor: valor del filtro}
+ */
 export function extraerFiltros() {
     const filtros = [];
 

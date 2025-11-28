@@ -1,3 +1,5 @@
+import { destacarElemento } from "../../components/destacarElemento.js";
+
 /**
  * Actualiza el elemento de NPersonajes con el número de personajes disponibles
  */
@@ -41,6 +43,7 @@ function actualizarPersonaje(personaje) {
     elementoImagen.setAttribute("src", imagen);
 
     const elementoPersonaje = document.createElement("div");
+    destacarElemento(elementoPersonaje);
     elementoPersonaje.classList.add("personaje");
     elementoPersonaje.appendChild(elementoImagen);
     elementoPersonaje.appendChild(elementoNombre);
