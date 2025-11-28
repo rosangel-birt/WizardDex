@@ -30,17 +30,32 @@ header {
     font-size: 3rem;
 }
 
+#contenedorPrincipal {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
 #kpi {
-    display: inline;
-    gap: 2rem;
+    display: flex;
+    padding-right: 1rem;
+    gap: 1rem;
+    justify-content: space-around;
     position: relative;
     height: 100%;
+}
+
+.estadistica {
+    height: 8rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
 }
 
 #filtros {
     display: inline;
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 0.5rem;
     padding: 1rem;
     margin: 0 1rem 1rem 1rem;
 }
@@ -49,4 +64,11 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: 25% auto;
+}
+
+#listaPersonajes {
+    background-color: white;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
